@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/easyResponsiveTabs.js"></script>
+    <!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    <title>Easy Responsive Tabs to Accordion</title>
+    <style type="text/css" rel="stylesheet">
+
+        #container {
+            width: 940px;
+            margin: 0 auto;
+        }
+        @media only screen and (max-width: 768px) {
+            #container {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+        <!--Horizontal Tab-->
+        <div id="parentHorizontalTab">
+            <ul class="resp-tabs-list hor_1">
+                <li>My Account</li>
+                <li>My Funeral Plan</li>
+                <li>Get Basic Quotes</li>
+				<li>Help</li>
+            </ul>
+            <div class="resp-tabs-container hor_1">
+                <div>
+                    <p>
+                        <!--horital Tabs-->
+
+                        <div id="ChildVerticalTab_1">
+                            <ul class="resp-tabs-list ver_1">
+                                <li>My Profile</li>
+                                <li>Password Changes</li>
+                                <li>Purchase Information</li>
+                                <li>Membership</li>
+                            </ul>
+                            <div class="resp-tabs-container ver_1">
+                                <div>
+                                    <p> <!-- ********************************My Profile********************************* -->
+									<form name="contact" action="client_info_update.php" method="POST" enctype="multipart/form-data">
+											<table style="margin-left:40px;" class="tablefordashboard">
+											<tr>
+												<td style="padding:5px; width:180px;"><div class="name-full">First Name:-</div></td>
+												<td style="padding:5px;"><input name="first_name"type="text" size="40" value="<?php echo ucwords($result['first_name']);?>" class="reg_field reg_field2"></td>	
+										   
+											</tr>
+											<tr>
+												<td  style="padding:5px;"><div class="name-full">Last Name:-</div></td>  
+												<td  style="padding:5px;"><input name="last_name" type="text" size="40" value="<?php echo ucwords($result['last_name']);?>" class="reg_field reg_field2"></td>	
+										   
+											</tr>
+											<tr> 
+												<td style="padding:5px; width:180px;"><span class="reg_name" style="margin-top:0;">Upload Profile Picture</span></td>
+												<td style="padding:5px;"><input type="file" id="file" name="profile_image" size="40" class="reg_field"/></td>
+										</tr>
+										<tr>
+											<tr>
+												<td  style="padding:5px;"> <div class="name-full">Phone:-</div></td>  
+												<td  style="padding:5px;"><input name="phone" type="text" size="40"  value="<?php echo $result['phone'];?>" class="reg_field reg_field2"></td>	
+										   
+											</tr>
+											<tr>
+												<td style="padding:5px;"> <div class="name-full">Email Address:-</div></td>  
+												<td style="padding:5px;"><input name="business_mail" type="text" size="40" value="<?php echo $result['email'];?>" class="reg_field reg_field2"></td>	
+										   
+											</tr>
+											<tr>
+												<td style="padding:5px;"> <div class="name-full">Select Country:-</div></td>  
+												<td style="padding:5px;"><select name="country" id="conutry" style="width:290px; height:30px;" class="input_bg dash_box_state">
+																		  <option value="">Select a Country</option>
+																		  <option value="Australia"  <?php if($result['country'] == 'Australia') echo "selected=selected";?>>Australia</option>
+																		 </select>
+												</td>	
+										   
+											</tr>
+											<tr>
+												<td style="padding:5px; vertical-align:top;"> <div class="name-full">Address:-</div></td>  
+												<td style="padding:5px;"><textarea name="address"cols="49" rows="6" class="dash_box_add"><?php echo $result['address'];?></textarea></td>	
+										   
+											</tr>
+											
+											<tr>
+												<td style="padding:5px;"> <div class="name-full">Select State:-</div></td>  
+												<td style="padding:5px;"><select name="state" style="width:290px; height:30px;" class="input_bg dash_box_state" id="state">
+																		 <option value="">Select state/region</option>
+														<?php
+															$statesql = "SELECT * FROM states ORDER BY state_name";
+															$statesex = mysql_query($statesql);
+															
+															while($states = mysql_fetch_assoc($statesex))
+															{
+																if($result['state'] == $states['state_id'])
+																{
+																	$selected1 = 'selected=selected';
+																}
+																else
+																{
+																	$selected1 = '';
+																}
+																
+																echo '<option value="'.$states['state_id'].'" '.$selected1.'>'.$states['state_name'].'</option>';
+															}
+														?>
+														</select>
+												</td>	
+										   
+											</tr>
+						
+											<tr>
+												<td style="padding:5px;"> <div class="name-full">Select Suburb:-</div></td>  
+												<td style="padding:5px;"><input name="city" value="<?php  echo $city_name['city_name'];?>" size="40" id="city" class="reg_field reg_field2" style="margin-left:0px !important"/>
+									
+												
+												 </td>	
+										   
+											</tr>
+						
+											<tr>
+												<td style="padding:5px;"> <div class="name-full">Postcode/ Zip:-</div></td>  
+												<td style="padding:5px;"><input name="postal_code" type="text" maxlength="10" size="40" value="<?php echo $result['zip_code']?>" class="reg_field reg_field2"></td>	
+											</tr>
+											
+											<tr>	
+												<td><br/><input class="login_button" type="submit" id="submit" name="update" value="UPDATE" /> </td>
+											</tr>
+											</table>
+
+											 <input type="hidden" value="contact" name="type" />				
+									</form>		
+									</p>
+                                </div>
+                                <div>
+                                    <p>
+									<!-- ********************************Password Change********************************* -->
+									<form name="password_frm" id="password_frm" action="client_info_update.php" method="POST">
+										<table style="margin-left:40px;" class="tablefordashboard">
+											<tr>
+												<td  style="padding:5px;"><div class="name-full">New Password:-</div></td>  
+												<td  style="padding:5px;"><input name="password" type="password" size="40" class="reg_field " id="password"></td>	
+											</tr>
+											<tr>
+												<td  style="padding:5px;"> <div class="name-full">Confirm Password:-</div></td>  
+												<td  style="padding:5px;"><input name="cnfrm_password" type="password" size="40" class="reg_field" id="cnfrm_password"></td>	
+											</tr>
+											<tr>
+											 <td><br /><input class="login_button" type="submit" id="submit" name="update" value="UPDATE"/></td>
+											</tr>
+											</table>
+
+											 <input type="hidden" value="password" name="type" />
+									</form>		
+									</p>
+                                </div>
+                                <div>
+                                    <p>
+									<!-- ************************************Purchase Information******************************************* -->
+									<style>
+									table th { border:solid 1px #FFFFFF !important; padding:5px; width:140px; background-color:#00a3b4!important; color:#FFFFFF !important;}
+									</style>  
+									<table style="margin-left:0px; font-size: 12px !important;">
+										<tr>
+											<th scope="col">Date</th>
+											<th scope="col">Trasaction number</th>
+											<th scope="col">Plan</th>
+											<th scope="col">Amount</th>
+											<th scope="col">Paid</th>
+											<th scope="col">Download Plan</th>
+										</tr>
+									<?php
+									
+											$purchase_information="select * from client_purchase_info where client_id='".$_SESSION['client']."' and order_info='Approved'";
+											$purchase_result=mysql_query($purchase_information);
+											$count=mysql_num_rows($purchase_result);
+										
+											if($count != '0')
+											{	
+											
+											for($i=1;$i<=$count;$i++)	
+											{
+									
+											$row_purchase_information=mysql_fetch_array($purchase_result);	
+											
+											if($i%2==0)
+											{	
+									?>		
+								
+										<tr style="background:#eee !important;">
+											<td><div class="name-full"><center><?php echo date('d-M-y',strtotime($row_purchase_information['date']));?></center></div></td>
+											<td><div class="name-full"><center><?php echo $row_purchase_information['transcation_no']; ?></center></div></td>
+											<td><div class="name-full"><center><?php echo $row_purchase_information['pdf_type']; ?></center></div></td>
+											<td><div class="name-full"><center><?php echo $row_purchase_information['reg_amount']; ?></center></div></td>
+											<td><div class="name-full"><center>Paid</center></div></td>
+									   
+										</tr>
+									<?php 
+									
+											}
+											else
+											{
+									?>		
+													<tr style="background:#FFFFFF  !important;">
+															<td><div class="name-full"><center><?php echo date('d-M-y',strtotime($row_purchase_information['date']));?></center></div></td>
+															<td><div class="name-full"><center><?php echo $row_purchase_information['transcation_no']; ?></center></div></td>
+															<td><div class="name-full"><center><?php echo $row_purchase_information['pdf_type']; ?></center></div></td>
+															<td><div class="name-full"><center><?php echo $row_purchase_information['reg_amount']; ?></center></div></td>
+															<td><div class="name-full"><center>Paid</center></div></td>
+													   
+													</tr>
+
+									<?php				
+											}
+											}
+											}
+											else
+											{
+									?>				
+									<tr>
+												<td><center><?php  echo 'No Record';?></center></td>
+												<td><center><?php  echo 'No Record';?></center></td>
+												<td><center><?php  echo 'No Record';?></center></td>
+												<td><center><?php  echo 'No Record';?></center></td>
+												<td><center><?php  echo 'No Record';?></center></td>
+									</tr>
+							
+									<?php 		
+											}
+									?>					
+										
+										</table>
+						
+									</p>
+                                </div>
+                                <div>
+                                    <p>
+									<!-- **************************************Membership******************************************** -->
+									 <table style="margin-left:5px;width: 100%;">
+										 <tr>
+												
+												  <td style="padding:5px;width:180px; margin-left:5px;"></td>
+												  <td style="padding:5px;"></td>
+												
+										</tr>	
+										 <tr>
+												
+												  <td style="padding:5px;width:180px; margin-left:5px;"></td>
+												  <td style="padding:5px;"></td>
+												
+										</tr>	
+										 <tr>
+												
+												  <td style="padding:5px;width:180px; margin-left:5px;"></td>
+												  <td style="padding:5px;"></td>
+												
+										</tr>	
+										 <tr>
+												
+												  <td style="padding:5px;width:180px; margin-left:5px;"></td>
+												  <td style="padding:5px;"></td>
+												
+										</tr>	
+										 <tr>
+												
+												  <td style="padding:5px;width:360px; margin-left:5px;"><font style="font-size:20px;">ACTIVE PLAN:  <!--<label style="background:#E97000; color:#FFFFFF; padding:5px; font-size:18px;">--><?php if($result['plan']=='1'){ echo 'EZIFUNERALS BASIC';} else if($result['plan']=='2'){ echo 'EZIFUNERALS DIRECT';} else if($result['plan']=='3'){ echo 'EZIFUNERALS ADVANCE';}?><!--</label>--></font></td>
+												  
+												
+										</tr>
+										<tr>
+												
+												  <td style="padding:5px;width:180px; margin-left:5px;"></td>
+												  <td style="padding:5px;"></td>
+												
+										</tr>	
+										 <tr>
+												
+												  <td style="padding:5px;width:180px; margin-left:5px;"></td>
+												  <td style="padding:5px;"></td>
+												
+										</tr>	
+										 <tr>
+												
+												  <td style="padding:5px;width:180px; margin-left:5px;"></td>
+												  <td style="padding:5px;"></td>
+												
+										</tr>	
+										 <tr>
+												
+												  <td style="padding:5px;width:180px; margin-left:5px;"></td>
+												  <td style="padding:5px;"></td>
+												
+										</tr>			
+										
+										</table>
+									</p>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+                     
+                </div>
+                <div>
+                   
+				  <!-- ***************************My Funeral Plan****************************8 -->
+                    <div>
+                     <p>
+                        <!--horital Tabs-->
+
+                        <div id="ChildVerticalTab_2">
+                            <ul class="resp-tabs-list ver_2">
+                                <li>About My Plan</li>
+                                <li>Manage my Plan</li>
+                                <li>View My Plan</li>
+                                <li>Get Direct Quotes</li>
+								 <p style="padding-top:12px; padding-left: 10px; color:#7a7a7a !important; font-size:12px" class="menu_fonts"> Have more questions? <a href="#funeral-tabs-5"> Submit a request</a></p>
+							
+                            </ul>
+                            <div class="resp-tabs-container ver_2">
+                                <div>
+                                    <p> <!-- ********************************About My Plan********************************* -->
+										
+							<?php if($row['plan'] == '1'){ ?>
+
+							<p style="font-size:15px;">Thank you for choosing eziFunerals at this most difficult time!</p><br/>
+							<p style="font-size:15px;">eziFunerals Basic is appropriate for those clients who DO NOT require specific support and assistance in planning a funeral.</p><br/>
+							<p style="font-size:15px;">If you need to create a personalised funeral plan before selecting a funeral director, then eziFunerals Direct or eziFunerals Advance may be the best option for you.</p><br/>
+							
+							<a href="client-membership.php"><input type="button" class="login_button" name="CREATE" value="CREATE MY FUNERAL PLAN" style="width:200px"/></a>	
+
+											
+							<?php }else{ ?>					
+							<p><b style="font-size:18px;color:#00a3b4 !important;">Thank you for choosing eziFunerals at this most difficult time!</b></p><br/>								
+							<!---atneed--->
+							<?php  if($row['plan'] == '2'){ ?>
+										<p style="font-size:15px;">This funeral plan is appropriate for those clients who require specific support and assistance in organising a funeral after someone has passed away or the loss of a family member is anticipated soon. You can use this plan to sit down with your family to discuss and plan the funeral arrangements before selecting and meeting a funeral director. If you are uncomfortable with searching for a funeral director, don’t know who to trust, want to save money or simply wish to avoid a sales focused environment, then this plan would be suitable for you.</p><br/>
+							<?php }
+								 if($row['plan'] == '3'){
+							 ?>				
+							 
+							 <!---Advance--->
+							<p style="font-size:15px;">eziFunerals Advance is suitable for people who would you like to plan their funeral in advance and have greater control and input into their own funeral arrangements before they die. With this option you can reduce the stress and burden that your family and friends will face after you have passed away. With EziFunerals Advance, you are planning your funeral while you are living and you will be required to nominate a “Funeral Guardian” to administer your funeral.</p><br/>
+							<?php } ?>
+							  
+								 <br/>      
+								 <p><b style="font-size:18px;color:#00a3b4 !important;">How to complete your Funeral Plan</b></p>
+								 <ol style="list-style:circle; font-size:15px;">
+									<li>Fill in the sections that apply to the funeral plan you require.</li>
+									<li>Each section has help text to guide you through the process.</li>
+									<li>To show the hidden help text, click the ? buttons at each question.</li>
+									<li>We’ll generate an online preview of your funeral plan for you to check.</li>
+									<li>eziFunerals will then provide you with your personalised funeral plan on payment of our fees.</li>
+								</ol>
+								
+								 <p><b style="font-size:18px;color:#00a3b4 !important;">What information is contained in My Funeral Plan?</b></p>
+								 <ol style="list-style:circle; font-size:15px;">
+									<li>“My Personal Details” section allows you to record details you or your family will need for official records.</li>
+									<li>“Details of Committal” section allows you to identify how you would like you or your loved one to be put to rest.</li>
+									<li>“Details of My Funeral” section allows you to detail your wishes regarding your or your loved one’s funeral. </li>
+									<li>“After the Funeral” section can support you or your family with a final act of love and allows you to organise or record how you wish yourself or your loved one to be remembered at the final resting place.</li>
+								</ol>	     	     
+								  <p style="font-size:15px;">For “Advanced Funeral Plans” you will be required to nominate your “Funeral Guardian” who will be notified upon your death. Once you have chosen your Funeral Guardian, they will be sent an e-mail where they can accept or decline your nomination. Your Funeral Guardian will have access to your Account and Funeral Plan only upon confirmation of your death. </p><br/>
+								   <p><b style="font-size:18px;color:#00a3b4 !important;">What happens after I have prepared My Funeral Plan?</b></p><br/>
+								   <p style="font-size:15px;">Once your personalised funeral plan is complete you can post it online and invite funeral directors to provide you with no obligation quotes. You can be rest assured that you and your family will be empowered to make informed decisions about all your funeral-related matters.You should review your funeral plan regularly so that your funeral wishes and personal details are always up to date. </p><br/>
+							 
+									<?php 
+								 if($row['plan']=='2' && $row_of_info['pdf_type']=='At Need Plan' && $row_of_info['order_info']=='Approved' )
+											 {
+											 ?>
+														
+										<a href="<?php echo base_url;?>atneed/preview.php"><input type="button" name="pdfedit" class="login_button" value="MANAGE" /></a>
+										
+											<a href="download.php?filename=<?php echo $row_of_info['pdf_name'];?>&type=<?php if($row_of_info['pdf_type']=='Advance Plan'){ echo 'advance'; }else{echo 'atneed';} ?>"><input type="button" class="login_button" name="DOWNLOAD" value="DOWNLOAD" /></a>	
+											
+										<?php }
+										else if($row['plan']=='2' && $row_of_info['pdf_type']!='At Need Plan' || $row_of_info['pdf_type'] =='At Need Plan' && $row_of_info['order_info']=='Declined')
+										{
+										
+												echo '<a href="'.base_url.'atneed/person-making-arrangements.php"><input type="button" class="login_button" name="CREATE MY FUNERAL PLAN" value="CREATE MY FUNERAL PLAN" style="width:200px"/></a>';	
+										}
+										
+										
+										?>
+									  
+
+							
+										<?php  if($row['plan']=='3' && $row_of_info['pdf_type']=='Advance Plan' && $row_of_info['order_info']=='Approved' )
+											  { 
+											  ?>
+										
+											<a href="<?php echo base_url;?>advance/advance_preview.php"><input type="button" class="login_button" name="MANAGE" value="MANAGE" /></a>	
+											<a href="download.php?filename=<?php echo $row_of_info['pdf_name'];?>&type=<?php if($row_of_info['pdf_type']=='Advance Plan'){ echo 'advance'; }else{echo 'atneed';} ?>"><input type="button" class="login_button" name="DOWNLOAD" value="DOWNLOAD" /></a>
+									 
+									  
+									   <?php }
+									   else if($row['plan']=='3' && $row_of_info['pdf_type']!='Advance Plan' || $row_of_info['pdf_type'] =='Advance Plan' && $row_of_info['order_info']=='Declined' )
+									   {
+									   
+										echo	'<a href="'.base_url.'advance/my-personal-details.php"><input type="button" class="login_button" name="CREATE MY FUNERAL PLAN" value="CREATE MY FUNERAL PLAN" style="width:200px" /></a>';
+										
+									   }
+												
+									   
+									   ?>
+										<?php } ?>
+									</p>
+                                </div>
+                                <div>
+                                    <p>
+									<!-- ********************************Manage my plan********************************* -->
+								
+									</p>
+                                </div>
+                                <div>
+                                    <p>
+									<!-- ************************************View My Plan******************************************* -->
+									
+						
+									</p>
+                                </div>
+                                <div>
+                                    <p>
+									<!-- *************************************Get Direct Quotes******************************************** -->
+									 
+									</p>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+                     
+                </div>
+                </div>
+                <div>
+                  <!---hide and show containt------------>
+
+					<style>
+
+					#show{display:block;}
+					#hide{display:none;}
+
+					</style>
+					<script>
+					/*function hideandshow() {
+						document.getElementById("show").style.display = "none";
+						document.getElementById("hide").style.display = "block";
+					}
+					function showtohide() {
+						document.getElementById("show").style.display = "block";
+						document.getElementById("hide").style.display = "none";
+								}
+								*/</script>		
+						
+				<!----------End hide and show containt------------>		
+						<div id="show" style="display:none">								
+						<p><b style="font-size:18px;color:#00a3b4 !important;">EziFunerals will help you organise a funeral at a price that's right for you. We'll connect you with approved funeral directors in your area.</b></p><br/>
+						<p><b style="font-size:18px;color:#00a3b4 !important;">How does EziFunerals work?</b></p><br/>
+						<p style=" font-size:15px;">On completion of the Request Funeral Quotes Form you will be able to do the following:</p>
+						<ol style="list-style:circle; font-size:15px;">
+						<li>Find funeral directors in your local area</li>
+						<li>Review funeral director profiles</li>
+						<li>Read customer reviews</li>
+						<li>Invite funeral directors to provide you with funeral quotes</li>
+						
+						</ol>
+						
+						 <p><b style="font-size:18px;color:#00a3b4 !important;">What happens after I send my funeral quote request?</b></p><br/>
+						 <ol style="list-style:circle;  font-size:15px;">
+							<li>We will contact invited funeral directors and notify them about your request</li>
+							<li>Funeral directors in your area will review and respond to your request</li>
+						</ol>	     	     
+						  <p style="font-size:15px;">Within hours, you will start receiving quotes from funeral directors in your area. You'll be able to compare quotes, messages, reviews and funeral services. When you're ready, select a funeral director that meets your individual needs.</p><br/>
+						   <p style="font-size:15px;">It's free for you to use.</p><br/>
+						   <input type="button" name="NEXT" value="GET QUOTES" class="login_button"  onclick="hideandshow();"/>
+						</div>
+						<div id="hide" style="display:block">		
+						   <?php include'post-your-plan-tab.php';  ?>	
+				
+						<div id="tab4" class="tab-content">	
+									</div> 
+									
+						</div>
+				</div><!-- end tab -->
+                    
+                </div>
+				
+				<div>
+				
+				</div>
+            </div>
+        </div>
+        <div id="nested-tabInfo">
+            Selected tab: <span class="tabName"></span>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+
+
+       
+        <br>
+        <br>
+        <br/>
+   
+	
+	<!--Plug-in Initialisation-->
+	<script type="text/javascript">
+    $(document).ready(function() {
+        //Horizontal Tab
+        $('#parentHorizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+
+        // Child Tab
+        $('#ChildVerticalTab_1').easyResponsiveTabs({
+            type: 'default',
+            width: 'auto',
+            fit: true,
+            tabidentify: 'ver_1', // The tab groups identifier
+            activetab_bg: '#fff', // background color for active tabs in this group
+            inactive_bg: '#F5F5F5', // background color for inactive tabs in this group
+            active_border_color: '#c1c1c1', // border color for active tabs heads in this group
+            active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
+        });
+		
+		       // Child Tab
+        $('#ChildVerticalTab_2').easyResponsiveTabs({
+            type: 'default',
+            width: 'auto',
+            fit: true,
+            tabidentify: 'ver_2', // The tab groups identifier
+            activetab_bg: '#fff', // background color for active tabs in this group
+            inactive_bg: '#F5F5F5', // background color for inactive tabs in this group
+            active_border_color: '#c1c1c1', // border color for active tabs heads in this group
+            active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
+        });
+		
+
+        //Vertical Tab
+        $('#parentVerticalTab').easyResponsiveTabs({
+            type: 'vertical', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo2');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+    });
+</script>
+</body>
+</html>

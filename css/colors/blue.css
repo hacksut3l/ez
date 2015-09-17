@@ -1,0 +1,305 @@
+a:hover, a:focus {
+	color: #16bce5;
+}
+
+#logo {
+	background: url(../../images/colors/blue/logo.png) no-repeat left top;
+}
+#logo h1 {
+	color: #16bce5;
+}
+
+#logo_innerpage {
+	background: url(../../images/colors/blue/logo.png) no-repeat left 10px;
+	background-size: 17%;
+}
+#logo_innerpage h1 {
+	color: #16bce5;
+}
+
+.top_social_links li:hover i {
+	color: #16bce5;
+}
+
+#access .menu ul li a:hover {
+	color: #000000;
+}
+#access .menu ul li a.active {
+	color: #16bce5;
+}
+#access .menu ul li ul li a {
+	background: #16bce5 url(../images/spacer.html) no-repeat center bottom;
+}
+
+.site_search_home #site-searchform #searchsubmit{
+	background: #16bce5 url(../../images/site-search-icon.png) no-repeat center 11px;
+}
+
+.fullwidthbanner .tp-caption.large_text_two{
+	color: #16bce5;
+}
+.fullwidthbanner .tp-caption a.button_slider{
+	color: #fff;
+	background: url(../../images/colors/blue/button-01.png) no-repeat left top;
+}
+.fullwidthbanner .tp-caption a.button_slider:hover{
+	color: #fff;
+	background: url(../../images/colors/blue/button-02.png) no-repeat left top;
+}
+
+.button_slider {
+	color: #fff;
+	background: #0696e9;
+	width:auto;
+	padding-bottom:5px;
+	padding-top:5px;
+	padding-left:25px;
+	padding-right:25px;
+	text-transform:lowercase;
+}
+.button_slider:hover {
+	color: #fff;
+	background: url(../../images/colors/blue/button-02.png) no-repeat left top;
+}
+
+.punch_text {
+	background-color: #16bce5;
+}
+.punch_text_02 {
+	background-color: #16bce5;
+}
+
+.punch_text .but_02 {
+	background-color: #278ef3;
+}
+.punch_text .but_01 {
+	color: #16bce5;
+}
+
+.sitefeatures_01 i {
+	color: #16bce5;
+}
+
+.readmore_but {
+	color: #16bce5;
+}
+.readmore_but:hover {
+	color: #16bce5;
+}
+
+.readmore_but_03 {
+	color: #16bce5;
+}
+
+h1 {
+	
+}
+.sidebar_title {
+	background: url(../../images/colors/blue/title-h-line2.png) no-repeat left 26px;
+}
+
+.fresh_works_list section .display .small-group div.small:hover .hover{
+	background:#16bce5;
+}
+
+.recent_blogs_list section .display .small-group div.small:hover .hover{
+	background:#16bce5;
+}
+
+.colored_bg {
+	background-color: #16bce5;
+}
+.sitefeatures_02 .right li {
+	border-bottom: 1px dashed #278ef3;
+}
+
+a.knowmore_but {
+	background-color: #16bce5;
+}
+a.knowmore_but:hover {
+	color: #fff;
+	background-color: #278ef3;
+}
+
+a.but_goback {
+	background: #16bce5;
+}
+a.but_goback:hover {
+	color: #fff;
+	background-color: #278ef3;
+}
+
+.sitefeatures_03 .left h2 {
+	color: #16bce5;
+}
+.sitefeatures_03 .right h2 {
+	color: #16bce5;
+}
+
+.readmore_but_02:hover {
+	color: #16bce5;
+}
+
+.page_title .pagenation {
+	color: #16bce5;
+}
+.page_title .pagenation a:hover {
+	color: #16bce5;
+}
+
+.list_doted02 li {
+	background: url(../../images/colors/blue/dot.png) no-repeat left 9px;
+}
+
+.big_text1 i {
+	color: #16bce5;
+}
+
+.lirc_section li.left i {
+	color: #16bce5;
+}
+
+.punchline_text_box {
+	border-left: 5px solid #16bce5;
+}
+
+.get_features .get_features_list li.left {
+	background-color: #16bce5;
+}
+
+.fullimage_box2 li i {
+	color: #16bce5;
+}
+.fullimage_box2 h3 {
+	color: #16bce5;
+}
+
+.lirt_section li strong {
+	color: #16bce5;
+}
+
+.error_pagenotfound i {
+	color: #16bce5;
+}
+
+.punch_text.nobgcolor {
+	color: #16bce5;
+}
+
+blockquote {
+	border-left: 5px solid #16bce5;
+}
+
+.small_social_links li i {
+	color: #16bce5;
+}
+
+.blog_post h3 a {
+	color: #16bce5;
+}
+.blog_post a.date strong {
+	color: #16bce5;
+}
+.blog_post a.date i {
+	background-color: #16bce5;
+}
+
+#site-searchform #searchsubmit{
+	background: #16bce5 url(../../images/site-search-icon.png) no-repeat center 11px;
+}
+
+.sidebar_widget ul.arrows_list1 li a {
+	color: #16bce5;
+}
+
+
+.acc-trigger a { background: url(../../images/colors/blue/accordion-ico.png) no-repeat 20px 13px;}
+.acc-trigger a:hover { color: #16bce5; border-bottom: 1px solid #fff;  }
+.acc-trigger.active a { color: #16bce5; background-position: 20px -58px; cursor: default;	}
+.acc-trigger a { background: url(../../images/colors/blue/accordion-ico.png) no-repeat 20px 13px;}
+.acc-trigger a:hover { color: #16bce5; border-bottom: 1px solid #fff;  }
+.acc-trigger.active a { color: #16bce5; background-position: 20px -58px; cursor: default;	}
+
+.accrodation .acc-trigger a { background: url(../../images/colors/blue/accordion-ico.png) no-repeat 20px 13px;}
+.accrodation .acc-trigger a:hover { color: #16bce5; border-bottom: 1px solid #fff;  }
+.accrodation .acc-trigger.active a { color: #16bce5; background-position: 20px -58px; cursor: default;	}
+.accrodation_full .acc-trigger a { background: url(../../images/colors/blue/accordion-ico.png) no-repeat 20px 13px;}
+.accrodation_full .acc-trigger a:hover { color: #16bce5; border-bottom: 1px solid #fff;  }
+.accrodation_full .acc-trigger.active a { color: #16bce5; background-position: 20px -58px; cursor: default;	}
+html .content_fullwidth ul.tabs li.active, html .content_fullwidth ul.tabs li.active a, html .content_fullwidth ul.tabs li.active a:hover  { 
+	border-top: 2px solid #16bce5;
+}
+.content_fullwidth html ul.tabs-two li.active, html .content_fullwidth ul.tabs-two li.active a,  html .content_fullwidth ul.tabs-two li.active a:hover  { 
+	color:#16bce5;
+}
+.sidebar_widget ul.tabs li.active, html .sidebar_widget ul.tabs li.active a,  html .sidebar_widget ul.tabs li.active a:hover  {
+		border-top: 1px solid #16bce5;
+}
+
+.recent_posts_list li a:hover {
+	color: #16bce5;
+}
+
+.tags li a:hover {
+	background-color: #16bce5;
+	color: #fff;
+}
+
+.sharepost li {
+	background-color: #16bce5;
+}
+
+.address-info a {
+	color: #16bce5;
+}
+
+.nivo-caption {
+	border-left: 5px solid #16bce5;
+}
+.nivo-caption .big-text {
+	color: #16bce5;
+}
+
+.iosSlider .slider .item .inner .text2 span {
+	color: #16bce5
+}
+.sliderContainer .slideSelectors .selected {
+	background: #16bce5;
+}
+
+.slider_static_image .text2 {
+	color: #16bce5;
+}
+
+.slider_video .text2 {
+	color: #16bce5;
+}
+
+.pricing-tables-helight .title {
+	background-color: #0969d8;
+	border-top: 3px solid #0863cc;
+	border-bottom: 1px solid #0b77ec;
+}
+.pricing-tables-helight .price {
+	background-color: #16bce5;
+}
+.button.small.colorchan{
+	color: #fff;
+	background-color: #16bce5;
+}
+.pricing-tables-helight-two .title {
+	background-color: #0969d8;
+	border-top: 3px solid #0863cc;
+	border-bottom: 1px solid #0b77ec;
+}
+.pricing-tables-helight-two .price {
+	background-color: #16bce5;
+}
+.pricing-tables-main .ordernow .colorchan{
+	color: #fff;
+	background-color: #16bce5;
+}
+.pricing-tables-main .ordernow .colorchan:hover{
+	color: #fff;
+	background-color: #278ef3;
+}

@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+span.fields_wrapp {
+float: left;
+width: 100%;
+text-align: left;
+margin-bottom: 5px;
+}
+span.fields_wrapp1
+{float: left;
+width: 100%;
+text-align: left;
+margin-bottom: 5px;
+}
+
+span.reg_name {
+float: left;
+width: 20%;
+}

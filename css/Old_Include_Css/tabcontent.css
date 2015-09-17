@@ -1,0 +1,74 @@
+﻿
+ul.tabs
+{
+    padding: 15px 0;
+    font-size: 0;
+    margin:0;
+    list-style-type: none;
+    text-align: left; /*set to left, center, or right to align the tabs as desired*/
+	background-color:#ff5736;
+	width:684px;
+	float:left;
+}
+        
+ul.tabs li
+{
+    display: inline;
+    margin-right:0px; /*distance between tabs*/
+}
+        
+ul.tabs li a
+{
+	text-decoration: none;
+	position: relative;
+	z-index: 1;
+	color: #000;
+	background: #ff5736;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-size:11px;
+	padding:15px 4px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #FF6633;
+}
+        
+ul.tabs li a:visited
+{
+    color: #000;
+}
+        
+ul.tabs li a:hover
+{
+    background:#025e94;
+}
+        
+ul.tabs li.selected a
+{
+    /*selected tab style */
+    position: relative;
+    top: 0px;
+    background: #025e94;;
+}
+        
+        
+ul.tabs li.selected a:hover
+{
+    /*selected tab style */
+    text-decoration: none;
+	background-color:#025e94;
+}
+        
+div.tabcontent
+{
+    display: block;
+}
+
+div.tabcontents
+{
+    border: 1px solid #B7B7B7;
+    background-color:#FFF;
+    border-radius: 0 2px 2px 2px;
+	float:left;
+	width:684px;
+}
