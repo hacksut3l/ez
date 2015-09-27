@@ -24,7 +24,6 @@
 	<link rel="stylesheet" href="../css/popup.css" type="text/css" />
     <link rel="stylesheet" href="../css/media.css" type="text/css" />
 	<!-- Greencubes responsive devices styles -->
-	<link rel="stylesheet" href="../css/responsive.css" type="text/css" />
 	
     <!-- responsive devices styles -->
 	<link rel="stylesheet" media="screen" href="../css/responsive-leyouts.css" type="text/css" />
@@ -38,7 +37,7 @@
     <!-- jquery jcarousel -->
     <link rel="stylesheet" type="text/css" href="../js/jcarousel/skin.css" />
     <link rel="stylesheet" type="text/css" href="../js/jcarousel/skin2.css" />
-	
+	<script src="../js/universal/jquery-2.1.4.min.js"></script>
 	<style>
 	
 	@font-face {
@@ -51,10 +50,10 @@
 	src: url(fonts/HelveticaNeueLTStd-Bd.otf);	
 	}*/
 	
-	@font-face {
+	/*@font-face {
 	font-family: 'Helvetica IE';
 	src: url(../fonts/HelveticaNeueLTStd-Lt.otf);	
-	}
+	}*/
 	
 	@font-face {
 	font-family: 'Helvetica Roman test';

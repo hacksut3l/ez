@@ -432,13 +432,23 @@
 			<h2 style=" font-family: 'Helvetica Medium 65', Arial; font-size:22px;"  class="heading">Request an Information Guide</h2>
 			<p style="font-family:Arial, Helvetica, sans-serif; font-size:17px;">Let us know your email address and we will send you a copy of our guide on funeral planning.
 </p><br />
-			<form name="" action="../requestguide.php" method="post">
+			<form id="informationGuide" action="../requestguide.php" method="post">
 			<input type="text" name="email" value="" placeholder="Email Address." style="height:40px; width:440px; border-radius:4px;" required class="datafieldofrequest">
 			<input type="hidden" name="Redirecturl" value="<?php echo base_url.'page/'.basename($_SERVER['SCRIPT_NAME']);?>"/>
 			<input type="hidden" name="pagename" value="<?php echo basename($_SERVER['SCRIPT_NAME']).'?type=client';?>"/>
-			<input type="submit" name="Submit" value="Submit" class="new_button director_info_btn" style="border:none">
+			<input type="submit" name="submit" value="Submit" class="new_button director_info_btn" style="border:none">
 			</form><br />
-		</div></center>
-        
+		</div></center>        
+    <script>
+    $('#informationGuide').submit(function(e) {
+      var email = document.forms["informationGuide"]["email"].value;
+        var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        if(re.test(email) == false){
+          alert("Please provide a valid email address");
+          e.preventDefault();
+        }
+
+    });
+    </script>
 </div>
 </div>	

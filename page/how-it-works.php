@@ -15,9 +15,7 @@
 <?php include '../include/header.php'; ?>
   	
   <script type="text/javascript" src="../js/universal/jquery.js"></script>
-    
-    <script src="../howitswork/js/jquery-1.9.1.min.js"></script>
-    <script src='../howitswork/js/jquery.scrollto.js'></script>
+    <script src="../js/universal/jquery-2.1.4.min.js"></script>
 <!--	<script src="../popformessge/lib/sweet-alert.min.js"></script>
   <link rel="stylesheet" href="../popformessge/lib/sweet-alert.css">-->
 

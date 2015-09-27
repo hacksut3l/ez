@@ -18,10 +18,10 @@
 	src: url(fonts/HelveticaNeueLTStd-Bd.otf);	
 	}*/
 	
-	@font-face {
+	/*@font-face {
 	font-family: 'Helvetica IE';
 	src: url(fonts/HelveticaNeueLTStd-Lt.otf);	
-	}
+	}*/
 	
 	@font-face {
 	font-family: 'Helvetica Roman test';
